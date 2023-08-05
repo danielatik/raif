@@ -15,7 +15,7 @@ col1, col2 = st.columns([2,3])
 #     image = Image.open('danigpt.png')
 #     st.image(image, width=200)
 
-with col1:
+with col2:
     st.title("Responsibe AI Fellowship 🤖")
 # st.write("Ask me anything about the conversations at Responsible AI fellowship sessions")
 # st.write("")
