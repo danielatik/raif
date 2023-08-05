@@ -9,10 +9,10 @@ load_dotenv()
 
 st.set_page_config(layout="centered")  
 
-col1 = st.columns([2,3])
+col1, col2 = st.columns([2,3])
 
 
-with col1:
+with col2:
     st.title("Responsibe AI Fellowship 🤖")
 # Initialize chat history
 if "messages" not in st.session_state:
@@ -24,7 +24,7 @@ for message in st.session_state.messages:
         st.markdown(message["content"])
 
 # Accept user input
-if prompt := st.chat_input("Ask anything about the Responible AI sessions..."):
+if prompt := st.chat_input("Ask anything about the Responible"):
     # Add user message to chat history
     st.session_state.messages.append({"role": "user", "content": prompt})
     # Display user message in chat message container
