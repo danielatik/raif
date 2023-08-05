@@ -17,7 +17,7 @@ col1, col2 = st.columns([2,3])
 
 with col2:
     st.title("Responsibe AI Fellowship 🤖")
-st.write("Ask me anything about the conversations at Responsible AI fellowship")
+st.write("<center>Ask me anything about the conversations at Responsible AI fellowship talks</center>")
 st.write("")
 st.markdown('---')
 # Initialize chat history
