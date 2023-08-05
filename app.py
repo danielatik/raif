@@ -9,13 +9,10 @@ load_dotenv()
 
 st.set_page_config(layout="centered")  
 
-col1, col2 = st.columns([2,3])
+col1 = st.columns([1,2])
 
-# with col1:
-#     image = Image.open('danigpt.png')
-#     st.image(image, width=200)
 
-with col2:
+with col1:
     st.title("Responsibe AI Fellowship 🤖")
 # st.write("Ask me anything about the conversations at Responsible AI fellowship sessions")
 # st.write("")
