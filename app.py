@@ -9,8 +9,11 @@ load_dotenv()
 
 st.set_page_config(layout="centered")  
 
-col1 = st.columns(1)
+col1, col2 = st.columns([2,3])
 
+# with col1:
+#     image = Image.open('danigpt.png')
+#     st.image(image, width=200)
 
 with col1:
     st.title("Responsibe AI Fellowship 🤖")
