@@ -46,14 +46,7 @@ if prompt := st.chat_input("Ask me anything about the Responsible AI Fellowship 
         agent_id= os.getenv("JUDINI_AGENT_ID")
         url = 'https://playground.judini.ai/api/v1/agent/'+agent_id
         headers = {"Content-Type": "application/json; charset=utf-8", "Authorization": "Bearer "+api_key}
-        data = {
-            "messages": [
-                {
-                    "role": "user",
-                    "content": prompt
-                }
-            ]
-        }
+        data = st.session_state.messages
         response = requests.post(url, headers=headers, json=data, stream=True)
         raw_data = ''
         tokens = ''
