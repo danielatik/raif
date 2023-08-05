@@ -41,12 +41,7 @@ if prompt := st.chat_input("Ask anything about the Responible sessions..."):
         url = 'https://playground.judini.ai/api/v1/agent/'+agent_id
         headers = {"Content-Type": "application/json; charset=utf-8", "Authorization": "Bearer "+api_key}
         data = {
-            "messages": [
-                {
-                    "role": "user",
-                    "content": prompt
-                }
-            ]
+            "messages": st.session_state.messages
         }
         response = requests.post(url, headers=headers, json=data, stream=True)
         raw_data = ''
