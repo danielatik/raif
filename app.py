@@ -9,17 +9,11 @@ load_dotenv()
 
 st.set_page_config(layout="centered")  
 
-col1, col2 = st.columns([2,3])
+col1, col2 = st.columns([1])
 
-# with col1:
-#     image = Image.open('danigpt.png')
-#     st.image(image, width=200)
 
 with col2:
     st.title("Responsibe AI Fellowship 🤖")
-st.write("Ask me anything about the conversations at Responsible AI fellowship")
-st.write("")
-st.markdown('---')
 # Initialize chat history
 if "messages" not in st.session_state:
     st.session_state.messages = []
@@ -30,7 +24,7 @@ for message in st.session_state.messages:
         st.markdown(message["content"])
 
 # Accept user input
-if prompt := st.chat_input("En que te puedo ayudar?"):
+if prompt := st.chat_input("Ask anything about the Responible AI sessions..."):
     # Add user message to chat history
     st.session_state.messages.append({"role": "user", "content": prompt})
     # Display user message in chat message container
